@@ -82,7 +82,7 @@ export default {
       //   position: absolute;
       width: 150px;
       height: 150px;
-      background-image: url(../../assets/logo.png);
+      background-image: url(../../assets/cat.jpg);
       background-color: #fff;
       background-size: cover;
       margin: 50px auto;

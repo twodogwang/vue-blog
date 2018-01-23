@@ -25,7 +25,7 @@ export default {
       text-decoration: none;
       transition: all 0.2s ease;
       &:hover {
-        padding-left: 2em;
+        padding-left: 1em;
       }
       &:visited {
         color: rgb(68, 68, 68);
@@ -34,9 +34,12 @@ export default {
   }
   span {
     color: #929292;
+    display: inline-block;
+    width: 90%;
   }
   p {
     color: rgb(68, 68, 68);
+    padding: 0.5em 3em;
   }
 }
 </style>
