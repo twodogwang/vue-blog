@@ -14,12 +14,12 @@ export default {
   data() {
     return {
       icons: [
-        {
+        {// eslint-disable-next-line
           picUrl: require("../../assets/GitHub.svg"),
           url: "https://github.com/twodogwang",
           alt: "GayHub"
         },
-        {
+        {// eslint-disable-next-line
           picUrl: require("../../assets/weibo.svg"),
           url: "",
           alt: "Weibo"

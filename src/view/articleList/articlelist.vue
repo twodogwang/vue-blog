@@ -18,7 +18,7 @@ export default {
 <style lang="less" scoped>
 .article {
   text-align: center;
-  padding: 1em 10%;
+  padding: 1em 8%;
   h2 {
     a {
       color: rgb(68, 68, 68);
@@ -39,7 +39,7 @@ export default {
   }
   p {
     color: rgb(68, 68, 68);
-    padding: 0.5em 3em;
+    padding: 0.5em 1  em;
   }
 }
 </style>
