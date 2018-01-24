@@ -3,27 +3,34 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.config.productionTip = false
+
+Vue.use(ElementUI, {
+  size: 'small'
+})
 
 /* eslint-disable no-new */
 
 Vue.prototype.xiaoyang = function (xiaoyang) {
-    const env = process.env.NODE_ENV;
-    switch (env) {
-        case 'development':
-            console.log(xiaoyang, `                   <=== from ${this.$route.name}.vue`);
-            break;
-        default:
-            return;
-            break;
-    }
+  const env = process.env.NODE_ENV;
+  switch (env) {
+    case 'development':
+      console.log(xiaoyang, `                   <=== from ${this.$route.name}.vue`);
+      break;
+    default:
+      return;
+      break;
+  }
 }
 new Vue({
-    el: '#app',
-    router,
-    components: {
-        App
-    },
-    template: '<App/>'
+  el: '#app',
+  router,
+  components: {
+    App
+  },
+  template: '<App/>',
+  render: h => h(App)
 })

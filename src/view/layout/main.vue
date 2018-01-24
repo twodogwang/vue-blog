@@ -5,11 +5,12 @@
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
-
+<style lang="less" scoped>
+.app-main {
+  padding-bottom: 1.5em;
+}
 </style>
+

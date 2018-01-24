@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    console.log(this);
+    // console.log(this);
     bus.$on("fromP", function() {
       console.log("fromP");
     });
@@ -57,7 +57,7 @@ export default {
 <style lang="less" scoped>
 .article {
   text-align: center;
-  padding: 1em 8%;
+  padding: 1em 7%;
   h2 {
     a {
       color: rgb(68, 68, 68);
@@ -78,7 +78,7 @@ export default {
   }
   p {
     color: rgb(68, 68, 68);
-    padding: 0.5em 1 em;
+    padding: 0.5em 1em;
   }
 }
 </style>
