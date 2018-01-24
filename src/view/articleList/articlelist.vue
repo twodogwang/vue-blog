@@ -1,16 +1,55 @@
 <template>
   <div class="article">
-      <h2><a :href="test.a">{{test.h2}}</a></h2>
+      <h2><router-link :to="'article/'+test.id">{{test.h2}}</router-link></h2>
       <span>{{test.span}}</span>
       <p>{{test.p}}</p>
+      <!-- <button @click="plus">plus</button> -->
       <!-- <slot name="foot"></slot> -->
   </div>
 </template>
 
 <script>
+var bus = require("./bus.js");
+
 export default {
   props: {
-    test: Object
+    test: Object,
+    str: Array
+  },
+  methods: {
+    plus(a) {
+      this.str.push(a);
+      console.log(this.str);
+    }
+  },
+  created() {
+    console.log(this);
+    bus.$on("fromP", function() {
+      console.log("fromP");
+    });
+    /* function xiaoyang(xiaoyang) {
+      // const env = process.env.NODE_ENV;
+      const env = 'development';
+      // const env = 'production';
+      switch (env) {
+        case "development":
+          console.log(xiaoyang);
+          break;
+
+        default:
+          return;
+          break;
+      }
+    } */
+    // xiaoyang('xiaoyang')
+    /* this.$on("test2", function() {
+      console.log("test1方法触发");
+      // this.str = 1;
+    });
+    window.xiaoyang=function(){
+      console.log('拉粑粑')
+    }
+    xiaoyang() */
   }
 };
 </script>
@@ -39,7 +78,7 @@ export default {
   }
   p {
     color: rgb(68, 68, 68);
-    padding: 0.5em 1  em;
+    padding: 0.5em 1 em;
   }
 }
 </style>

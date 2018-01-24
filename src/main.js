@@ -7,9 +7,23 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+
+Vue.prototype.xiaoyang = function (xiaoyang) {
+    const env = process.env.NODE_ENV;
+    switch (env) {
+        case 'development':
+            console.log(xiaoyang, `                   <=== from ${this.$route.name}.vue`);
+            break;
+        default:
+            return;
+            break;
+    }
+}
 new Vue({
-  el: '#app',
-  router,
-  components: { App },
-  template: '<App/>'
+    el: '#app',
+    router,
+    components: {
+        App
+    },
+    template: '<App/>'
 })
