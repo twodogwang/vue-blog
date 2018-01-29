@@ -64,19 +64,19 @@ service.interceptors.response.use(
         duration: 2 * 1000
       })
     } else if (res.code === 20000) {
-      /* Message({
+      Message({
         message: res.msg,
         type: 'success',
         duration: 1.5 * 1000
-      }) */
-      Notification({
+      })
+      /* Notification({
         title: '消息',
         message: res.msg,
         type: 'success',
         duration: 1500,
         position: 'bottom-right',
         customClass: 'notification'
-      })
+      }) */
       return response.data
     }
   },

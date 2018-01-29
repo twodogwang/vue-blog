@@ -1,8 +1,8 @@
 <template>
   <div class="article">
-      <h2><router-link :to="'article/'+test.id">{{test.h2}}</router-link></h2>
-      <span>{{test.span}}</span>
-      <p>{{test.p}}</p>
+      <h2><router-link :to="{name:'article',params:{id:data.id||test.id}}">{{data.title||test.title}}</router-link></h2>
+      <span>{{data.tags||test.tags}}</span>
+      <p>{{data.abstract||test.abstract}}</p>
       <!-- <button @click="plus">plus</button> -->
       <!-- <slot name="foot"></slot> -->
   </div>
@@ -14,7 +14,8 @@ var bus = require("./bus.js");
 export default {
   props: {
     test: Object,
-    str: Array
+    str: Array,
+    data: Object
   },
   methods: {
     plus(a) {
