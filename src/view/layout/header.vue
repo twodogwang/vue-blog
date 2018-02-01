@@ -1,7 +1,7 @@
 <template>
   <div class="blog-header">
       <div class="header">
-          <a href="/" class="link"><span class="headerLink">主页</span></a>
+          <a href="./" class="link"><span class="headerLink">主页</span></a>
       </div>
   </div>
 </template>

@@ -25,6 +25,11 @@ Vue.prototype.xiaoyang = function (xiaoyang) {
       break;
   }
 }
+
+function output(xiaoyang) {
+  console.log(process.env.NODE_ENV)
+  process.env.NODE_ENV == 'development' && console.log(xiaoyang)
+}
 new Vue({
   el: '#app',
   router,

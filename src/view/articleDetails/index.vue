@@ -24,13 +24,13 @@ import { getArticleDetail } from "../../api/index";
 
 export default {
   beforeCreate() {
-    this.xiaoyang(this.$route);
+    output&&output(this.$route);
     getArticleDetail(this.$route.params).then(res => {
-      // this.xiaoyang(res);
+      // output(res);
       // Object.assign(this.article, res.article);
       this.article = res.article.result;
-      this.prev_id = res.article.prev_id;
-      this.next_id = res.article.next_id;
+      this.next_id = res.article.prev_id;
+      this.prev_id = res.article.next_id;
     });
   },
   mounted() {
@@ -61,7 +61,7 @@ export default {
   methods: {
     viewOther(id) {
       getArticleDetail({ id }).then(res => {
-        // this.xiaoyang(res);
+        // output(res);
         // Object.assign(this.article, res.article);
         this.article = res.article.result;
         this.prev_id = res.article.prev_id;
@@ -70,10 +70,10 @@ export default {
     }
   },
   beforeRouteUpdate(to, from, next) {
-    this.xiaoyang(to);
-    this.xiaoyang(from);
+    output&&output(to);
+    output&&output(from);
     getArticleDetail(to.params).then(res => {
-      // this.xiaoyang(res);
+      // output(res);
       // Object.assign(this.article, res.article);
       this.article = res.article.result;
       this.prev_id = res.article.prev_id;
